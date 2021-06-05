@@ -93,7 +93,7 @@ void blit(uint8_t *line, Sprite &s, int y){
         line++;
         src++;
     }
-    /* */
+    //*/
 }
 
 
@@ -155,7 +155,7 @@ void blitMirror(uint8_t *line, Sprite &s, int y){
         line++;
         src--;
     }
-    /* */
+    //*/
 }
 
 
@@ -282,7 +282,7 @@ void blitFlipMirror(uint8_t *line, Sprite &s, int y){
         line++;
         src--;
     }
-    /* */
+    //*/
 }
 
 Sprite spriteBuffer[PROJ_MAX_SPRITES];
@@ -305,7 +305,7 @@ void pixelCopySolid4BPP(uint8_t *line, const uint8_t *src, uint32_t w, uint32_t 
         auto b = (sx&1)?
             src[sx>>1]&0xF:
             src[sx>>1]>>4;
-        if(b) *line = b;
+        *line = b;
         line++;
         sx++;
     }
@@ -660,7 +660,7 @@ void drawSprites(int16_t y, uint8_t *line, int max){
             }
             --i;
             --spriteBufferPos;
-            /* */
+            //*/
             continue;
         }
 
