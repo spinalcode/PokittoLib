@@ -128,10 +128,10 @@ namespace Audio {
 
     public:
         void init(){
-            NVIC_SetVector((IRQn_Type)TIMER_32_0_IRQn, (uint32_t)IRQ);
             if(this->wasInit)
                 return;
             this->wasInit = true;
+            NVIC_SetVector((IRQn_Type)TIMER_32_0_IRQn, (uint32_t)IRQ);
 
             // enable amp
             LPC_GPIO_PORT->SET[1] = (1 << 17);
